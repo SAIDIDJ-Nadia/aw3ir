@@ -1,0 +1,30 @@
+body {
+    background-color: lightgrey;
+    font-size: 20px;
+  }
+  table{
+    background-color: white;    
+  }
+  td{
+    padding: 10px;
+  }
+  a:hover {
+    background-color: orange;
+  }
+  tr:nth-of-type(2n+1) {
+    background: rgb(238, 201, 201);
+  }
+  td:hover {
+    background-color: rgb(228, 146, 228); 
+  }  
+  .zoom:hover {
+    transform: scale(2); 
+  }
+  .rounded-img{
+    border-radius: 50%;
+  }
+  @media only screen and (max-width: 600px) {
+    body {
+        background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    }
+}
