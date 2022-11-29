@@ -23,20 +23,20 @@ function Validation() {
         contactStore.add(n, p, d, adr, m);
         var contactList = contactStore.getList();
         document.querySelector("table tbody").innerHTML =
-            "<tr><td>nom: </td><td> Prenom:</td><td>Date de Naissance:</td><td>Adresse:</td><td> Mail:</td><tr>" +
+            "<tr><td><b>nom: </b></td><td><b> Prenom:</b></td><td><b>Date de Naissance:</b></td><td><b>Adresse:</b></td><td><b> Mail:</b></td><tr>" +
             "<tr><td>"
         for (var index in contactList) {
             document.querySelector("table tbody").innerHTML =
                 document.querySelector("table tbody").innerHTML + "<tr><td>" +
-                n +
+                contactList[index].name +
                 "</td><td>" +
-                p +
+                contactList[index].firstname +
                 "</td><td>" +
-                d +
+                contactList[index].date +
                 "</td><td>" +
-                adr +
+                contactList[index].adress +
                 "</td><td>" +
-                m +
+                contactList[index].mail +
                 "</td><tr>";
         };
     };
