@@ -16,9 +16,11 @@
         <div class="card-header">
             {{ meteo.name }} / {{ meteo.dt * 1000 | date : "EEEE d LLLL HH:mm" }}
         </div>
-        <img class="card-img-top"
-            src="https://maps.googleapis.com/maps/api/staticmap?markers={{meteo.coord.lat}},{{meteo.coord.lon}}&zoom=5&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg"
-            alt="Card image cap">
+        <a href="http://maps.google.com/maps?q={{ latlon }}&ll={{ latlon }}&z=5" target="_blank">
+            <img class="card-img-top" src="https://maps.googleapis.com/maps/api/staticmap?markers={{
+            latlon
+          }}&zoom=5&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg" alt="Card image cap" />
+        </a>
         <div class="card-body">
             <h5 class="card-title">
                 <i v-bind:class="'wi wi-owm-day-'+meteo.weather[0].id"></i>
