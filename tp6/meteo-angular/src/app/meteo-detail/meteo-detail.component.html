@@ -30,20 +30,21 @@
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
-                <i class="wi wi-cloud"></i> Nuage: {{meteo.clouds.all}}%
+                <i class="text-primary wi wi-cloud"></i> Nuage: {{meteo.clouds.all}}%
             </li>
             <li class="list-group-item">
                 <i class="wi wi-humidity"></i> Humidité: {{meteo.main.humidity}}%
             </li>
             <li class="list-group-item">
-                <i class="wi wi-windy"></i> Vent: {{meteo.wind.speed}} km/h
+                <i class="text-success wi wi-windy"></i> Vent: {{meteo.wind.speed}} km/h
             </li>
             <li class="list-group-item">
-                <i class="wi wi-sunrise"></i> Levé du soleil: {{meteo.sys.sunrise * 1000 | date: " HH:mm" }}
+                <i class="text-warning wi wi-sunrise"></i> Levé du soleil: {{meteo.sys.sunrise * 1000 | date: " HH:mm"
+                }}
 
             </li>
             <li class="list-group-item">
-                <i class="wi wi-sunset"></i>Couché du soleil: {{meteo.sys.sunset * 1000 | date: 'HH:mm'}}
+                <i class="text-danger wi wi-sunset"></i>Couché du soleil: {{meteo.sys.sunset * 1000 | date: 'HH:mm'}}
             </li>
         </ul>
     </div>
@@ -53,6 +54,3 @@
 
     {{meteo.message}} (erreur {{meteo.cod}})
 </div>
-
-
-<hr> {{meteo | json}}
